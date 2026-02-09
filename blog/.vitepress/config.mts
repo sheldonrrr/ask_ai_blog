@@ -1,0 +1,144 @@
+import { defineConfig } from 'vitepress'
+
+const socialLinks = [
+  { icon: 'github', link: 'https://github.com/sheldonrrr/ask_grok' },
+  { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>' }, link: 'https://www.reddit.com/r/AskAIPlugin_calibre/' },
+  { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>' }, link: 'https://www.mobileread.com/forums/forumdisplay.php?f=166' }
+]
+
+// 中文侧边栏配置
+const zhSidebar = {
+  '/zh/docs/': [
+    {
+      text: '快速开始',
+      items: [
+        { text: '概览', link: '/zh/docs/' },
+        { text: 'API 密钥说明', link: '/zh/docs/api-keys' },
+        { text: '免费 API 选项', link: '/zh/docs/free-api-options' },
+        { text: '安装指南', link: '/zh/docs/installation' },
+        { text: '首次设置', link: '/zh/docs/first-time-setup' }
+      ]
+    },
+    {
+      text: '使用方法',
+      items: [
+        { text: '基本使用', link: '/zh/docs/basic-usage' },
+        { text: 'AI 搜索', link: '/zh/docs/ai-search' },
+        { text: '快捷键', link: '/zh/docs/keyboard-shortcuts' },
+        { text: '提示词', link: '/zh/docs/prompts' }
+      ]
+    },
+    {
+      text: '参考',
+      items: [
+        { text: '配置', link: '/zh/docs/configuration' },
+        { text: '故障排除', link: '/zh/docs/troubleshooting' },
+        { text: '隐私', link: '/zh/docs/privacy' },
+        { text: '技巧', link: '/zh/docs/tips' },
+        { text: '常见问题', link: '/zh/docs/faq' }
+      ]
+    }
+  ],
+  '/zh/posts/': [
+    {
+      text: '文章列表',
+      items: [
+        { text: '欢迎', link: '/zh/posts/' },
+        { text: '插件的诞生是一个意外', link: '/zh/posts/story' }
+      ]
+    }
+  ]
+}
+
+// 英文侧边栏配置
+const enSidebar = {
+  '/en/docs/': [
+    {
+      text: 'Getting Started',
+      items: [
+        { text: 'Overview', link: '/en/docs/' },
+        { text: 'API Keys Explained', link: '/en/docs/api-keys' },
+        { text: 'Free API Options', link: '/en/docs/free-api-options' },
+        { text: 'Installation', link: '/en/docs/installation' },
+        { text: 'First Time Setup', link: '/en/docs/first-time-setup' }
+      ]
+    },
+    {
+      text: 'Usage',
+      items: [
+        { text: 'Basic Usage', link: '/en/docs/basic-usage' },
+        { text: 'AI Search', link: '/en/docs/ai-search' },
+        { text: 'Keyboard Shortcuts', link: '/en/docs/keyboard-shortcuts' },
+        { text: 'Prompts', link: '/en/docs/prompts' }
+      ]
+    },
+    {
+      text: 'Reference',
+      items: [
+        { text: 'Configuration', link: '/en/docs/configuration' },
+        { text: 'Troubleshooting', link: '/en/docs/troubleshooting' },
+        { text: 'Privacy', link: '/en/docs/privacy' },
+        { text: 'Tips', link: '/en/docs/tips' },
+        { text: 'FAQ', link: '/en/docs/faq' }
+      ]
+    }
+  ],
+  '/en/posts/': [
+    {
+      text: 'Articles',
+      items: [
+        { text: 'Welcome', link: '/en/posts/' },
+        { text: 'The creation of the Ask AI Plugin was accidental', link: '/en/posts/story' }
+      ]
+    }
+  ]
+}
+
+export default defineConfig({
+  title: "Ask AI Plugin in calibre",
+  description: "分享开发过程中探索到的技术边界和实际经验",
+  
+  locales: {
+    zh: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/zh/',
+      themeConfig: {
+        nav: [
+          { text: '首页', link: '/zh/docs/' },
+          { text: '博客', link: '/zh/posts/' },
+          { text: '关于', link: '/zh/about' }
+        ],
+        sidebar: zhSidebar,
+        outline: { label: '页面导航' },
+        docFooter: { prev: '上一篇', next: '下一篇' }
+      }
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/docs/' },
+          { text: 'Blog', link: '/en/posts/' },
+          { text: 'About', link: '/en/about' }
+        ],
+        sidebar: enSidebar,
+        outline: { label: 'On this page' },
+        docFooter: { prev: 'Previous', next: 'Next' }
+      }
+    }
+  },
+
+  themeConfig: {
+    socialLinks,
+    footer: {
+      message: 'Powered by VitePress',
+      copyright: '© 2026 Ask AI Plugin in calibre'
+    },
+    search: {
+      provider: 'local'
+    }
+  }
+})
