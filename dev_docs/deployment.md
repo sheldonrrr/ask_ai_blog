@@ -2,6 +2,12 @@
 
 本文档说明如何部署 Ask AI Plugin 博客站点到 Cloudflare Pages。
 
+## 一键部署
+
+cd ./blog #进入blog目录
+npm run build #本地生成静态站点目录
+wrangler pages deploy .vitepress/dist --project-name=ask-ai-blog #部署到Cloudflare Pages
+
 ## 项目结构
 
 ```
@@ -130,4 +136,4 @@ npx wrangler login
 
 ---
 
-*最后更新: 2026-01-23*
+*最后更新: 2026-02-09*
