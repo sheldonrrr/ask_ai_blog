@@ -1,1 +1,0 @@
-import{_ as a,o,c as r,ag as t}from"./chunks/framework.CbQjVMS6.js";const p=JSON.parse('{"title":"FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"en/docs/faq.md","filePath":"en/docs/faq.md"}'),s={name:"en/docs/faq.md"};function i(n,e,l,h,u,c){return o(),r("div",null,[...e[0]||(e[0]=[t("",23)])])}const g=a(s,[["render",i]]);export{p as __pageData,g as default};
